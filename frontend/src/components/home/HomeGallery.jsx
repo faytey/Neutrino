@@ -38,7 +38,7 @@ const HomeGallery = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {allProperties?.map((item, i) => {
           return (
-            <Link href={`/home/${i}`} key={i}>
+            <Link href={`/description/${i}`} key={i}>
               <div className="relative h-[15rem] w-[100%] hover:cursor-pointer hover:scale-125 mb-6">
                 <div className="absolute inset-0">
                   <DisplayNFT id={item?.[3]} width={350} height={250} />

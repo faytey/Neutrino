@@ -28,7 +28,7 @@ const Property = () => {
   return (
     <div className="flex flex-col items-center w-[90%] md:w-[50%] mx-auto p-8 shadow-lg m-8">
       <h1>Property Details</h1>
-      <div className="m-4 border-2 border-black flex flex-col items-center gap-2">
+      <div className="m-4 border-2 border-black flex flex-col items-center gap-2 font-sans">
         <DisplayNFT id={nftId} width={350} height={250} />
         <p className="text-center">Owner: {allProperties?.[ID]?.[0]}</p>
         <p className="text-center">
