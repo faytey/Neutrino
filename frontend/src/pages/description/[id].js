@@ -3,10 +3,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { neutrinoEstate } from "../../utils/contractInfo";
-
-//=======================================
-//=======================================
-//=====================================
 import estateAbi from "../../utils/neutroAbi.json";
 import {
   useAccount,
@@ -15,15 +11,8 @@ import {
   useWaitForTransaction,
   usePrepareContractWrite,
 } from "wagmi";
-// import styling from "../../../styles/Home.module.css";
 
 const Description = () => {
-  const { id } = useRouter().query;
-  const ID = Number(id);
-
-  //=======================================
-  //=======================================
-  //=======================================
   const { address } = useAccount();
   const CONTRACT = "0xEB86d6F284b6dE1aC0AF20d04815Ea8c1F04c1eF";
   const nftAddr = "0x32F7a08bBE5Edd19C64d52c3E4C47676492AE696";
@@ -43,6 +32,8 @@ const Description = () => {
     isLoading: reclaimIsLoading,
     write: reclaim,
   } = useContractWrite(config1);
+
+  const ID = Number(id);
 
   const { data: createWaitData, isLoading: createWaitIsLoading } =
     useWaitForTransaction({
